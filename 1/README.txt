@@ -10,3 +10,5 @@ $ git clone https://github.com/duttaoindril/omscs_7641.git
 $ cd omscs_7641/1
 
 $ python3 main.py
+
+LATEST ANALYSIS: https://github.com/duttaoindril/omscs_7641/blob/main/1/odutta3-analysis.pdf

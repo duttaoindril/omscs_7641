@@ -38,7 +38,7 @@ def stock():
     util.handle_training_testing_plot(lambda epoch: (training_accuracies[epoch-1], testing_accuracies[epoch-1]), epochs, "Stock NN Epoch vs Accuracy", 'Epoch')
 
 def yoga():
-    width = yoga_count*2
+    width = yoga_count
     depths = [*range(1, 6)]
     util.handle_training_testing_plot(lambda depth: neural_network(get_yoga_data(1), depth, width, False), depths, f"Yoga NN Depth vs Accuracy", 'Depth')
 
@@ -46,7 +46,7 @@ def yoga():
     widths = [*range(int(yoga_count/4), int(yoga_count*3)+1, int(yoga_count/4))]
     util.handle_training_testing_plot(lambda width: neural_network(get_yoga_data(1), depth, width, False), widths, "Yoga NN Width vs Accuracy", 'Width')
 
-    width = yoga_count*2
+    width = yoga_count
     _, _, history = neural_network(get_yoga_data(1), depth, width, False, True)
     epochs = [*range(1,history.params['epochs']+1)]
     training_accuracies = history.history[accuracy_key]
