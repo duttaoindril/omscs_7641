@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.DS_Store
+
+yoga/yoga-master-training-db-export.json
