@@ -37,12 +37,12 @@ def stock():
     kernel_functions = ['gaussian', 'laplacian']
     util.handle_training_testing_plot(lambda kernel_function: support_vector_machine(get_stock_data(1), kernel_function, learning_rate, True), kernel_functions, "Stock SVM Kernel Function vs Accuracy", 'Kernel Function')
 
-    kernel_function = kernel_functions[0]
+    kernel_function = kernel_functions[1]
     learning_rates = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5]
     util.handle_training_testing_plot(lambda learning_rate: support_vector_machine(get_stock_data(1), kernel_function, learning_rate, True), learning_rates, "Stock SVM Learning Rate vs Accuracy", 'Learning Rate')
 
     learning_rate = learning_rates[0]
-    a, b, history = support_vector_machine(get_stock_data(1), kernel_function, learning_rate, True, True)
+    _, _, history = support_vector_machine(get_stock_data(1), kernel_function, learning_rate, True, True)
     epochs = [*range(1,history.params['epochs']+1)]
     training_accuracies = history.history[accuracy_key]
     testing_accuracies = history.history['val_'+accuracy_key]
@@ -58,7 +58,7 @@ def yoga():
     util.handle_training_testing_plot(lambda learning_rate: support_vector_machine(get_yoga_data(1), kernel_function, learning_rate, False), learning_rates, "Yoga SVM Learning Rate vs Accuracy", 'Learning Rate')
 
     learning_rate = learning_rates[2]
-    a, b, history = support_vector_machine(get_yoga_data(1), kernel_function, learning_rate, False, True)
+    _, _, history = support_vector_machine(get_yoga_data(1), kernel_function, learning_rate, False, True)
     epochs = [*range(1,history.params['epochs']+1)]
     training_accuracies = history.history[accuracy_key]
     testing_accuracies = history.history['val_'+accuracy_key]
@@ -66,7 +66,7 @@ def yoga():
 
 def main():
     stock()
-    # yoga()
+    yoga()
 
 if __name__ == "__main__":
     main()
