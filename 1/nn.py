@@ -54,7 +54,7 @@ def yoga():
     util.handle_training_testing_plot(lambda epoch: (training_accuracies[epoch-1], testing_accuracies[epoch-1]), epochs, "Yoga NN Epoch vs Accuracy", 'Epoch')
 
 def main():
-    # stock()
+    stock()
     yoga()
 
 if __name__ == "__main__":
