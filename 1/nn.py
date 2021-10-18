@@ -40,8 +40,12 @@ def stock():
 def yoga():
     width = yoga_count
     depths = [*range(1, 6)]
-    util.handle_training_testing_plot(lambda depth: neural_network(get_yoga_data(1), depth, width, False), depths, f"Yoga NN Depth vs Accuracy", 'Depth')
-
+    util.handle_training_testing_plot(
+        lambda depth: neural_network(get_yoga_data(1), depth, width, False),
+        depths,
+        'Yoga NN Depth vs Accuracy',
+        'Depth',
+    )
     depth = depths[-1]
     widths = [*range(int(yoga_count/4), int(yoga_count*3)+1, int(yoga_count/4))]
     util.handle_training_testing_plot(lambda width: neural_network(get_yoga_data(1), depth, width, False), widths, "Yoga NN Width vs Accuracy", 'Width')
