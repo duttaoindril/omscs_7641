@@ -7,6 +7,9 @@ from matplotlib.pyplot import plot as plt
 from mpl_toolkits.mplot3d import axes3d
 from statistics import mean
 
+# percents = [0.01, *np.linspace(0.1,0.9,9), 0.99]
+# leaf_sizes = [*range(1,10,1),*range(10,50,5),*range(50,501,50)]
+
 def start_time(label):
     start = time()
 
