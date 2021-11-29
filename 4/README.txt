@@ -9,6 +9,9 @@ $ pip3 install gym
 
 $ git clone https://github.com/duttaoindril/omscs_7641.git
 
-$ cd omscs_7641/3
+$ cd omscs_7641/4
 
 $ python3 main.py
+
+Credit to [hiive](https://github.com/hiive) for the contents of the entire `hiive` folder
+https://github.com/hiive/hiivemdptoolbox
